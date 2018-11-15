@@ -25,7 +25,7 @@ RUN apt-get update \
 ADD /vol1/default /etc/nginx/sites-available/
 
 ADD /vol1/php.ini /etc/php/7.1/fpm/
-ADD /index.php /var/www/html/
+ADD /index.php /blog/public/
 #ENTRYPOINT service nginx start
 #WORKDIR /
 ADD start.sh .
