@@ -29,7 +29,8 @@ ADD /index.php /var/www/html/
 #ENTRYPOINT service nginx start
 #WORKDIR /
 ADD start.sh .
-CMD chmod +x start.sh && ./start.sh
+RUN chmod +x start.sh
+CMD ./start.sh
 #CMD ["/bin/bash","./start.sh"]
 # Expose ports.
 EXPOSE 80
