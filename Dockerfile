@@ -28,8 +28,8 @@ ADD /vol1/php.ini /etc/php/7.1/fpm/
 ADD /index.php /var/www/html/
 #ENTRYPOINT service nginx start
 #WORKDIR /
-ADD start.sh /start.sh
-ENTRYPOINT ["/start.sh"]
+ADD start.sh .
+CMD chmod +x start.sh && ./start.sh
 #CMD ["/bin/bash","./start.sh"]
 # Expose ports.
 EXPOSE 80
